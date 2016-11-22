@@ -8,11 +8,11 @@ const DEPENDENCIES = [
 ];
 
 const get = injector(['ng']).get;
-const refs = {};
+const refs = DEPENDENCIES.reduce((obj, dep) => {
+  return obj[dep] = get(dep), obj;
+}, {});
 
-DEPENDENCIES.forEach((dep) => refs[dep] = get(dep));
 
-// ToDo: see about dynamic exports with babel
 export const $http = refs.$http;
 export const $q = refs.$q;
 export const $interval = refs.$interval;

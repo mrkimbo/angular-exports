@@ -1,13 +1,10 @@
 module.exports =  {
-  entry: './src/index.js',
+  entry: './src/demo.js',
   output: {
     filename: 'angular-exports.js',
     library: 'angular-exports',
     libraryTarget: 'umd',
     umdNamedDefine: true
-  },
-  externals: {
-    // 'angular': 'angular' // removes angular from built artifact
   },
   devServer: {
     contentBase: 'dist/',
