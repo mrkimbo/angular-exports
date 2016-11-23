@@ -8,7 +8,7 @@ instead of relying on Angular's dependency injection.
     npm install
     npm serve
 
-This should open a browser window to the 'stub' page
+This serves the demo app from localhost:8080
 
 ## Basic Usage
 
@@ -19,7 +19,7 @@ npm install angular-exports --save-dev
 Import the functionality you need
 
 ```js
-import { $http, $interpolate } from 'angular-exports';
+import { $http, $q, $interpolate } from 'angular-exports';
 ```
 
 ### Peer Dependencies
